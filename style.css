@@ -1,47 +1,171 @@
 body {
-  font-family: 'Fira+Code', monospace;
-  background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
-  color: #1a1a1a;
-  margin: 0;
-  padding: 0;
-}
-header, footer {
-  text-align: center;
-  padding: 2rem;
-}
-main {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-}
-.about-card {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  max-width: 600px;
-  margin-right: 2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.2s ease forwards;
-  animation-delay: 0.5s;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+    font-family: 'Fira Code', monospace;
+    background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
   }
-}
-.profile-photo {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  header, footer {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #1565c0;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  a {
+    color: #1565c0;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #0d47a1;
+  }
+  
+  .about-card,
+  .edu-card,
+  .project-card,
+  .image-card,
+  .skill-card {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  }
+  
+  .profile-photo {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .project-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .project-row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-card ul {
+    list-style: none;
+    padding: 0;
+    font-size: 0.95rem;
+  }
+  
+  .skill-card ul li {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  
+  .skill-card img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .contact-info {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-info p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  .flight-path {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  svg {
+    width: 100%;
+    max-width: 600px;
+    height: 200px;
+  }
+  
+  @keyframes flySlow {
+    0% {
+      offset-distance: 0%;
+    }
+    100% {
+      offset-distance: 100%;
+    }
+  }
+  
+  .plane {
+    offset-path: path('M10,150 C100,0 300,300 580,50');
+    animation: flySlow 10s linear infinite;
+  }
+  
