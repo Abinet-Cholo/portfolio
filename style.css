@@ -168,4 +168,9 @@ body {
     offset-path: path('M10,150 C100,0 300,300 580,50');
     animation: flySlow 10s linear infinite;
   }
-  
+  .responsive-img {
+  max-width: 100%; /* ensures the image doesn't overflow its container */
+  width: 300px;    /* sets the desired width */
+  height: auto;    /* maintains aspect ratio */
+}
+
