@@ -1,26 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abinet Cholo | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation -->
+  <header style="position: sticky; top: 0; background: #fff; z-index: 1000; padding: 1rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <nav>
+      <a href="#about">About</a> |
+      <a href="#education">Education</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#skills">Skills</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section id="about">
-  <header><h1>About Me</h1></header>
-  <img src="your-photo.jpg" alt="Abinet Cholo" class="profile-photo">
-  <main>
-    <div class="about-card">
-      <p>I'm Abinet Cholo, a Computer Science student at NYU Abu Dhabi...</p>
-    </div>
-  </main>
-</section>
+  <!-- About Section -->
+  <section id="about">
+    <header>
+      <h1>About Me</h1>
+    </header>
 
-<footer>
-  <p style="text-align:center; padding: 2rem;">© 2025 Abinet Cholo. All rights reserved.</p>
-</footer>
+    <img src="images/profile.jpg" alt="Abinet Cholo" class="profile-photo">
+
+    <main>
+      <div class="about-card">
+        <p>
+          I'm Abinet Cholo, a Computer Science student at New York University, originally from Ethiopia and currently studying at NYU Abu Dhabi. I'm passionate about machine learning, software development, and using technology to solve meaningful real-world problems. I have experience working with Python, C++, Java, Dart, and SQL, and have developed several course-based and independent projects using tools like Flutter, TensorFlow, and PyTorch.
+        </p>
+        <p>
+          I'm currently exploring the intersection of artificial intelligence and product development, and I’m especially interested in building tools that improve how we interact with data and information. I also enjoy working on mobile apps and full-stack solutions that make people's lives easier.
+        </p>
+        <p>
+          Beyond tech, I’m a huge football fan and love creating a collaborative and inclusive environment wherever I go.
+        </p>
+      </div>
+    </main>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <header>
+      <h1>Education</h1>
+    </header>
+
+    <main>
+      <div class="edu-card">
+        <p><strong>New York University</strong><br>
+          B.S. in Computer Science<br>
+          Expected Graduation: May 2027<br>
+          Campus: NYU Abu Dhabi<br>
+          Currently studying at NYU Paris (Spring 2025)
+        </p>
+      </div>
+
+      <div class="flight-path">
+        <svg viewBox="0 0 600 200">
+          <defs>
+            <marker id="plane" markerWidth="40" markerHeight="40" refX="20" refY="20">
+              <text x="20" y="20" font-size="20" text-anchor="middle">✈️</text>
+            </marker>
+          </defs>
+          <path d="M10,150 C100,0 300,300 580,50" stroke="#1565c0" stroke-dasharray="6" fill="none" marker-end="url(#plane)" />
+          <text x="10" y="170" fill="#0d47a1" font-size="14">NYU Abu Dhabi</text>
+          <text x="500" y="40" fill="#0d47a1" font-size="14">NYU Paris</text>
+          <circle r="10" fill="transparent">
+            <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#flight-line" />
+            </animateMotion>
+          </circle>
+        </svg>
+      </div>
+    </main>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <header>
+      <h1>Projects</h1>
+    </header>
+
+    <main>
+      <div class="project-wrapper">
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Fake News Detection Model</h2>
+            <p>Built and trained Logistic Regression and LSTM models to classify news articles with over 95% accuracy. Tools used: Python, NLP, TensorFlow, PyTorch.</p>
+          </div>
+          <div class="image-card">
+            <img src="https://via.placeholder.com/300" alt="Fake News Detection">
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Expense Tracker App</h2>
+            <p>Developed a Flutter-based expense tracker using SQLite to manage and visualize expenses with graphs and summaries.</p>
+          </div>
+          <div class="image-card">
+            <img src="https://via.placeholder.com/300" alt="Expense Tracker">
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>2D Plane Survival Game</h2>
+            <p>Created a survival-style 2D game using object-oriented programming in a team setting. Focused on gameplay mechanics and collision detection.</p>
+          </div>
+          <div class="image-card">
+            <img src="https://via.placeholder.com/300" alt="2D Game">
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Multi-Language Dictionary</h2>
+            <p>Designed a translator app supporting multiple languages using data structures and file handling techniques.</p>
+          </div>
+          <div class="image-card">
+            <img src="https://via.placeholder.com/300" alt="Dictionary App">
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Library Catalog Management System</h2>
+            <p>Implemented a full catalog system for managing books, authors, and availability using Java and linked lists.</p>
+          </div>
+          <div class="image-card">
+            <img src="https://via.placeholder.com/300" alt="Library System">
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <header>
+      <h1>Skills</h1>
+    </header>
+
+    <main>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming Languages</h3>
+          <ul>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo"> Python</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo"> C++</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo"> Java</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart logo"> Dart</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL logo"> SQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Machine Learning</h3>
+          <ul>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow logo"> TensorFlow</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch logo"> PyTorch</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Keras_logo.svg" alt="Keras logo" style="width: 18px;"> Keras</li>
+            <li>🧠 NLP</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <h3>Tools & Libraries</h3>
+          <ul>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter logo"> Flutter</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo"> Git</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy logo" style="width: 18px;"> NumPy</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas logo" style="width: 18px;"> Pandas</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <header>
+      <h1>Contact</h1>
+    </header>
+
+    <main>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">abinet-cholo</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/abinet-cholo" target="_blank">abinet-cholo</a></p>
+      </div>
+    </main>
+  </section>
+  <script src="script.js"></script>
 </body>
 </html>
