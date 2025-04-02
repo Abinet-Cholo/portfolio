@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abinet Bushura - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abinet Cholo - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <img src="images/profile.jpg" alt="Abinet Bushura" class="profile-img">
-        <h1>Abinet Bushura</h1>
-        <p>Machine Learning & Software Engineer</p>
-        <nav>
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <img src="images/fake-news.jpg" alt="Fake News Detection Model">
-            <h3>Fake News Detection Model</h3>
-            <p>Built and trained Logistic Regression and LSTM models for fake news classification, achieving 99% accuracy with Logistic Regression and 91.29% with LSTM.</p>
-        </div>
-        <div class="project">
-            <img src="images/expense-tracker.jpg" alt="Expense Tracker App">
-            <h3>Expense Tracker App</h3>
-            <p>Developed a Flutter-based expense tracker with an SQLite database for managing expenses with categorization and summary reports.</p>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python, C++, Java, Dart, SQL</li>
-            <li>TensorFlow, PyTorch, Scikit-learn</li>
-            <li>Flutter, SQLite, Data Structures & Algorithms</li>
-            <li>Pandas, NumPy, NLP Techniques</li>
-        </ul>
-    </section>
-    
-    <section id="education">
-        <h2>Education</h2>
-        <p><strong>New York University</strong> - BSc in Computer Science (Expected May 2027)</p>
-    </section>
-    
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">Abinet Cholo</a></p>
-        <p>GitHub: <a href="https://github.com/Abinet-Cholo" target="_blank">Abinet-Cholo</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Abinet Bushura</p>
-    </footer>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-content">
+      <h1>Abinet Cholo</h1>
+      <p>Machine Learning &amp; Software Developer</p>
+    </div>
+  </header>
+
+  <!-- ABOUT SECTION WITH PROFILE IMAGE -->
+  <section id="about" class="fade-in">
+    <h2>About Me</h2>
+    <!-- Replace 'profile.jpg' with your profile image file -->
+    <img src="profile.jpg" alt="Profile Photo" class="profile-pic" />
+    <p>
+      Welcome to my portfolio website! I am a Computer Science student at New York University with a passion for machine learning, software development, and solving real-world problems through technology.
+    </p>
+  </section>
+
+  <section id="education" class="fade-in">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <h3>New York University</h3>
+      <p>Bachelor’s of Science in Computer Science</p>
+      <p>Expected Graduation: May 2027</p>
+      <p>Location: Abu Dhabi, UAE</p>
+    </div>
+  </section>
+
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Fake News Detection Model</h3>
+      <p>
+        Built and trained Logistic Regression and LSTM models to classify news articles, achieving 99% accuracy with Logistic Regression and 91.29% with LSTM.
+      </p>
+      <p><strong>Tools:</strong> Python, NLP techniques, TensorFlow</p>
+    </div>
+    <div class="project">
+      <h3>Expense Tracker App</h3>
+      <p>
+        Developed a Flutter-based expense tracker app with an SQLite database for managing user expenses. Features include expense categorization and summary reports.
+      </p>
+      <p><strong>Role:</strong> Flutter Developer</p>
+    </div>
+  </section>
+
+  <section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python, C++, Java, Dart, SQL</li>
+      <li><strong>Machine Learning:</strong> TensorFlow, Keras, Scikit-Learn, PyTorch, NLP techniques</li>
+      <li><strong>Development:</strong> Flutter, SQLite, Data Structures &amp; Algorithms</li>
+      <li><strong>Data Management:</strong> Pandas, NumPy</li>
+      <li>Strong analytical and debugging skills</li>
+      <li>Excellent technical documentation and communication</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">Abinet Cholo</a></p>
+    <p>GitHub: <a href="https://github.com/Abinet-Cholo" target="_blank">Abinet-Cholo</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Abinet Cholo. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
