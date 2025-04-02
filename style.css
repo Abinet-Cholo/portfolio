@@ -173,4 +173,11 @@ body {
   width: 300px;    /* sets the desired width */
   height: auto;    /* maintains aspect ratio */
 }
+.small-img {
+  max-width: 300px; /* or any width you prefer */
+  height: auto;     /* maintains aspect ratio */
+  display: block;   /* optional, lets you center the image */
+  margin: 0 auto;   /* optional, centers the image horizontally */
+}
+
 
