@@ -5,12 +5,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abinet Cholo — Portfolio</title>
-  <meta name="description" content="Portfolio of Abinet Cholo — CS @ NYU. Backend, AI, and product engineering." />
+  <meta name="description" content="Portfolio of Abinet Cholo — CS @ NYU Abu Dhabi. Backend development, applied AI, and software engineering projects." />
   <meta name="theme-color" content="#0b1220" />
   <link rel="icon" href="favicon.ico" />
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Styles -->
@@ -24,6 +23,7 @@
       <nav class="nav__links" id="navLinks">
         <a class="active" href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
@@ -41,8 +41,7 @@
       <div class="hero__copy">
         <h1>Abinet Cholo</h1>
         <p class="tagline">
-          <span id="typed"></span>
-          <span class="caret"></span>
+          <span id="typed"></span><span class="caret"></span>
         </p>
         <div class="hero__cta">
           <a class="btn" href="#projects">View Projects</a>
@@ -63,15 +62,32 @@
       <h2 class="section__title">About Me</h2>
       <div class="card about">
         <p>
-          I’m Abinet, a sophomore Computer Science student at New York University Abu Dhabi (Class of 2027), currently studying in Paris. 
-          I focus on backend engineering and applied AI — building scalable systems, experimenting with deep learning, and shipping clean code.
+          I’m Abinet, a Computer Science student at New York University Abu Dhabi (Class of 2027) and a full scholarship recipient. 
+          I specialize in backend engineering and applied AI, with experience building scalable APIs, optimizing databases, and deploying production-ready systems.
         </p>
         <ul class="about__highlights">
-          <li>Backend APIs, relational & NoSQL databases, and cloud deploys</li>
-          <li>AI projects in PyTorch and scikit-learn (deep learning, NLP)</li>
-          <li>Strong foundations in algorithms, data structures, and statistics</li>
+          <li>Backend APIs, databases, and cloud deployments</li>
+          <li>AI & ML with PyTorch, Scikit-learn, and NumPy</li>
+          <li>Strong foundations in algorithms, data structures, and software design</li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section__title">Experience</h2>
+      <article class="card experience">
+        <h3>Software Engineer Intern — WeGo Ride</h3>
+        <p class="muted">Adama, Ethiopia • Jun 2025 – Aug 2025</p>
+        <ul>
+          <li>Designed REST APIs with Node.js integrating fleet, payment, and support modules, boosting request throughput by 20/sec at peak load.</li>
+          <li>Refactored MongoDB schema + indexing strategies, improving query efficiency by 35% and supporting 5,000+ daily ride requests.</li>
+          <li>Implemented automated tests with Mocha/Chai, raising backend coverage to 65% and improving API reliability.</li>
+          <li>Deployed backend on AWS EC2 with CloudWatch monitoring, reducing error recovery time by 20%.</li>
+        </ul>
+      </article>
     </div>
   </section>
 
@@ -79,53 +95,44 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section__title">Projects</h2>
-
       <div class="grid3">
-        <!-- Project 1 -->
+        <!-- Fake News Detection -->
         <article class="card project">
-          <img src="images/fake-news-detection.png" alt="Fake News Detection model screenshot" />
+          <img src="images/fake-news-detection.png" alt="Fake News Detection model" />
           <div class="project__body">
             <h3>Fake News Detection</h3>
-            <p>Implemented Logistic Regression (TF-IDF) and LSTM on 50K+ articles. Achieved ~79% accuracy with reusable preprocessing pipelines and hyperparameter tuning.</p>
-            <div class="badges">
-              <span>Python</span><span>scikit-learn</span><span>PyTorch</span>
-            </div>
+            <p>Built Logistic Regression and LSTM models on 50K+ articles, achieving 79% accuracy (F1 0.78). Developed reusable preprocessing pipelines, enabling real-time inference and 30% faster retraining.</p>
+            <div class="badges"><span>Python</span><span>scikit-learn</span><span>PyTorch</span></div>
           </div>
         </article>
 
-        <!-- Project 2 -->
-        <article class="card project">
-          <img src="images/wego.png" alt="WeGo Ride project" />
-          <div class="project__body">
-            <h3>WeGo Ride</h3>
-            <p>Full-stack ride-booking web app for students. Built Node.js backend with Express, PostgreSQL, JWT auth, and Chapa/Stripe integration. Hosted on AWS & Vercel.</p>
-            <div class="badges">
-              <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>AWS</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
+        <!-- Expense Tracker -->
         <article class="card project">
           <img src="images/expense-tracker.png" alt="Expense Tracker app" />
           <div class="project__body">
-            <h3>Expense Tracker</h3>
-            <p>Cross-platform Flutter app with SQLite, charts, and category dashboards; supports 150+ users and 200+ daily transactions.</p>
-            <div class="badges">
-              <span>Flutter</span><span>SQLite</span><span>Dart</span>
-            </div>
+            <h3>Expense Tracker App</h3>
+            <p>Flutter app with SQLite, real-time charts, and category dashboards. Adopted by 150+ users handling 200+ daily transactions, improving usability with undo-delete and dynamic visualization.</p>
+            <div class="badges"><span>Flutter</span><span>Dart</span><span>SQLite</span></div>
           </div>
         </article>
 
-        <!-- Project 4 -->
+        <!-- Multi-Language Translator -->
         <article class="card project">
-          <img src="images/translator.png" alt="C++ Multi-language translator" />
+          <img src="images/translator.png" alt="C++ Translator project" />
           <div class="project__body">
             <h3>Multi-Language Translator</h3>
-            <p>C++ dictionary with custom hash table; 800K+ translations; 1.8× query speedup with lazy deletion reducing memory usage by ~25%.</p>
-            <div class="badges">
-              <span>C++</span><span>Data Structures</span><span>Algorithms</span>
-            </div>
+            <p>C++ dictionary using a custom hash table to manage 800K+ translations. Optimized with polynomial rolling and lazy deletion, achieving 1.8× faster queries and 25% lower memory use.</p>
+            <div class="badges"><span>C++</span><span>Data Structures</span><span>Algorithms</span></div>
+          </div>
+        </article>
+
+        <!-- Library Catalog -->
+        <article class="card project">
+          <img src="images/library.png" alt="Library Catalog project" />
+          <div class="project__body">
+            <h3>Library Catalog Management</h3>
+            <p>Designed a custom tree-based data structure in C++ for fast catalog search. Reduced lookup time from 5s to 2s, with CLI supporting 15+ librarian features like overdue tracking and borrower history.</p>
+            <div class="badges"><span>C++</span><span>Trees</span><span>OOP</span></div>
           </div>
         </article>
       </div>
@@ -139,21 +146,19 @@
       <div class="card skills">
         <div class="skills__group">
           <h4>Languages</h4>
-          <div class="badges">
-            <span>Python</span><span>C++</span><span>Java</span><span>JavaScript</span><span>Dart</span><span>SQL</span>
-          </div>
+          <div class="badges"><span>Python</span><span>C++</span><span>SQL</span><span>Java</span><span>JavaScript</span><span>Dart</span></div>
         </div>
         <div class="skills__group">
-          <h4>Frameworks</h4>
-          <div class="badges">
-            <span>Flutter</span><span>Node.js</span><span>Express</span><span>PyTorch</span><span>scikit-learn</span>
-          </div>
+          <h4>AI & ML</h4>
+          <div class="badges"><span>PyTorch</span><span>scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span></div>
         </div>
         <div class="skills__group">
-          <h4>Tools & Databases</h4>
-          <div class="badges">
-            <span>Git</span><span>GitHub</span><span>AWS</span><span>PostgreSQL</span><span>MongoDB</span>
-          </div>
+          <h4>Frameworks & Tools</h4>
+          <div class="badges"><span>Flutter</span><span>Git</span><span>GitHub</span><span>AWS</span></div>
+        </div>
+        <div class="skills__group">
+          <h4>Core Strengths</h4>
+          <div class="badges"><span>Debugging</span><span>Problem-Solving</span><span>Cross-Team Communication</span></div>
         </div>
       </div>
     </div>
@@ -165,18 +170,9 @@
       <h2 class="section__title">Contact</h2>
       <div class="grid2">
         <form class="card form" action="https://formspree.io/f/your-id" method="POST">
-          <label>
-            Name
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
+          <label>Name <input type="text" name="name" required /></label>
+          <label>Email <input type="email" name="email" required /></label>
+          <label>Message <textarea name="message" rows="5" required></textarea></label>
           <button class="btn" type="submit">Send</button>
           <p class="muted">Or email me at <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
         </form>
@@ -185,8 +181,8 @@
           <h4>Connect</h4>
           <ul>
             <li><a href="mailto:ab11475@nyu.edu">Email</a></li>
-            <li><a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://github.com/abinet-cholo" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">LinkedIn</a></li>
+            <li><a href="https://github.com/Abinet-Cholo" target="_blank">GitHub</a></li>
           </ul>
         </div>
       </div>
