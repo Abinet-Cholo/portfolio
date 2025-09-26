@@ -15,23 +15,6 @@ header, footer {
   padding: 2rem;
 }
 
-main {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1.2s ease forwards;
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 h1 {
   font-size: 2rem;
   color: #1565c0;
@@ -57,18 +40,11 @@ a:hover {
   color: #0d47a1;
 }
 
-.about-card,
-.experience-card,
-.project-card,
-.skill-card {
+.card {
   background: rgba(255, 255, 255, 0.8);
-  padding: 1.5rem 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
-  max-width: 750px;   /* keeps cards from stretching */
-  margin: 1.5rem auto;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-  text-align: center;
-  line-height: 1.6;
 }
 
 /* Grid for projects */
@@ -78,7 +54,6 @@ a:hover {
   gap: 1.5rem;
 }
 
-/* Project cards floating effect */
 .project {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
@@ -98,18 +73,6 @@ a:hover {
   padding: 1rem;
 }
 
-/* Skills grid */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.skills__group h4 {
-  margin-bottom: 0.5rem;
-}
-
 .badges span {
   display: inline-block;
   background: #1565c0;
@@ -118,14 +81,4 @@ a:hover {
   padding: 0.3rem 0.6rem;
   margin: 0.2rem;
   border-radius: 8px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .about-card,
-  .experience-card {
-    max-width: 95%;
-    font-size: 0.95rem;
-    padding: 1.2rem;
-  }
 }
