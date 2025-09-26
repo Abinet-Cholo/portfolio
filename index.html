@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Blog — Abinet Cholo</title>
-  <meta name="description" content="Blog posts by Abinet Cholo on backend, AI, and learning."/>
+  <title>Abinet Cholo — Portfolio</title>
+  <meta name="description" content="Portfolio of Abinet Cholo — Software Engineer, AI enthusiast, and backend developer."/>
   <meta name="theme-color" content="#0b1220"/>
   <link rel="icon" href="favicon.ico"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -16,12 +16,12 @@
     <div class="container nav__inner">
       <a class="logo" href="index.html">AC</a>
       <nav class="nav__links" id="navLinks">
-        <a href="index.html#home">Home</a>
+        <a class="active" href="index.html#home">Home</a>
         <a href="index.html#about">About</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#skills">Skills</a>
         <a href="index.html#contact">Contact</a>
-        <a class="active" href="blog.html">Blog</a>
+        <a href="blog.html">Blog</a>
       </nav>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
@@ -29,31 +29,64 @@
     </div>
   </header>
 
-  <!-- ===== BLOG LIST ===== -->
-  <section class="section">
+  <!-- ===== HERO ===== -->
+  <section id="home" class="section hero">
     <div class="container">
-      <h2 class="section__title">Blog</h2>
+      <h1>Hi, I’m <span class="highlight">Abinet Cholo</span></h1>
+      <p>Software Engineer | AI Enthusiast | Backend Developer</p>
+      <a class="btn" href="#projects">See My Work</a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section__title">About Me</h2>
+      <p>Write a short bio here. Talk about your studies at NYU, your AI projects, and your backend development skills.</p>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section__title">Projects</h2>
       <div class="grid3">
-        <article class="card post">
-          <h3>Optimizing TF-IDF + Logistic Regression</h3>
-          <p class="muted">Sep 2025 • ML, Python</p>
-          <p>Notes on preprocessing pipelines and evaluation pitfalls.</p>
-          <a class="link" href="post1.html">Read more</a>
+        <article class="card">
+          <h3>Fake News Detection</h3>
+          <p>Compared Logistic Regression vs LSTM for text classification.</p>
+          <a href="https://github.com/yourrepo/fake-news" target="_blank">View Project</a>
         </article>
-        <article class="card post">
-          <h3>Designing a Clean API in Node.js</h3>
-          <p class="muted">Sep 2025 • Backend</p>
-          <p>How I structure Express apps for clarity and maintainability.</p>
-          <a class="link" href="post2.html">Read more</a>
+        <article class="card">
+          <h3>WeGo Ride</h3>
+          <p>Ride-booking platform for university students using Node.js & PostgreSQL.</p>
+          <a href="https://github.com/yourrepo/wego" target="_blank">View Project</a>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section__title">Skills</h2>
+      <p>Python • C++ • JavaScript • SQL • PyTorch • Node.js • Flutter • AWS • GitHub</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section__title">Contact</h2>
+      <p>Email: <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">Profile</a></p>
+      <p>GitHub: <a href="https://github.com/abinet-cholo" target="_blank">abinet-cholo</a></p>
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Abinet Cholo • Writing about code & learning</p>
+      <p>© <span id="year"></span> Abinet Cholo • Built with ❤️ using HTML, CSS, and JS</p>
     </div>
   </footer>
 
