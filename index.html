@@ -60,7 +60,7 @@
   <section id="about" class="section">
     <div class="container">
       <h2 class="section__title">About Me</h2>
-      <div class="about-card">
+      <div class="card about">
         <p>
           I am a Computer Science student at New York University Abu Dhabi (Class of 2027), studying on a full scholarship. 
           I have hands-on experience in backend development and applied AI, having built scalable APIs, optimized databases, 
@@ -75,7 +75,7 @@
   <section id="experience" class="section">
     <div class="container">
       <h2 class="section__title">Experience</h2>
-      <div class="experience-card">
+      <article class="card experience">
         <h3>Software Engineer Intern — WeGo Ride</h3>
         <p class="muted">Adama, Ethiopia • Jun 2025 – Aug 2025</p>
         <ul>
@@ -84,7 +84,7 @@
           <li>Implemented automated Mocha/Chai tests, raising backend coverage to 65% and ensuring reliability at scale.</li>
           <li>Deployed backend to AWS EC2 with CloudWatch monitoring, reducing recovery time by 20%.</li>
         </ul>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -176,60 +176,4 @@
         <div class="card contact__links">
           <h4>Connect</h4>
           <ul>
-            <li><a href="mailto:ab11475@nyu.edu">Email</a></li>
-            <li><a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/Abinet-Cholo" target="_blank">GitHub</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Abinet Cholo • Built with HTML, CSS, and JS</p>
-    </div>
-  </footer>
-
-  <!-- SCRIPT -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const typed = document.getElementById("typed");
-      const phrases = [
-        "Backend APIs & Databases",
-        "AI with PyTorch & Scikit-learn",
-        "Problem Solver",
-        "CS @ NYU Abu Dhabi"
-      ];
-      let phraseIndex = 0;
-      let charIndex = 0;
-      let typing = true;
-
-      function type() {
-        let currentPhrase = phrases[phraseIndex];
-
-        if (typing) {
-          typed.textContent = currentPhrase.substring(0, charIndex + 1);
-          charIndex++;
-          if (charIndex === currentPhrase.length) {
-            typing = false;
-            setTimeout(type, 1500); // hold phrase
-            return;
-          }
-        } else {
-          typed.textContent = currentPhrase.substring(0, charIndex - 1);
-          charIndex--;
-          if (charIndex === 0) {
-            typing = true;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-          }
-        }
-        setTimeout(type, typing ? 100 : 60);
-      }
-
-      type();
-    });
-  </script>
-</body>
-</html>
+            <li><a href="mailto:a
