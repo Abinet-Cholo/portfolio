@@ -1,26 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <!-- SEO -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abinet Cholo — Portfolio</title>
-  <meta name="description" content="Portfolio of Abinet Cholo — Software Engineer, AI enthusiast, and backend developer."/>
-  <meta name="theme-color" content="#0b1220"/>
-  <link rel="icon" href="favicon.ico"/>
+  <meta name="description" content="Portfolio of Abinet Cholo — CS @ NYU. Backend, AI, and product engineering." />
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <header class="nav">
     <div class="container nav__inner">
       <a class="logo" href="index.html">AC</a>
       <nav class="nav__links" id="navLinks">
-        <a class="active" href="index.html#home">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#contact">Contact</a>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
         <a href="blog.html">Blog</a>
       </nav>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
@@ -29,64 +35,168 @@
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section id="home" class="section hero">
-    <div class="container">
-      <h1>Hi, I’m <span class="highlight">Abinet Cholo</span></h1>
-      <p>Software Engineer | AI Enthusiast | Backend Developer</p>
-      <a class="btn" href="#projects">See My Work</a>
+    <div class="container grid2">
+      <div class="hero__copy">
+        <h1>Abinet Cholo</h1>
+        <p class="tagline">
+          <span id="typed"></span>
+          <span class="caret"></span>
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn--ghost" href="blog.html">Read Blog</a>
+        </div>
+      </div>
+      <div class="hero__visual">
+        <div class="avatar">
+          <img src="images/profile.jpg" alt="Abinet Cholo">
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
+  <!-- ABOUT -->
   <section id="about" class="section">
     <div class="container">
       <h2 class="section__title">About Me</h2>
-      <p>Write a short bio here. Talk about your studies at NYU, your AI projects, and your backend development skills.</p>
+      <div class="card about">
+        <p>
+          I’m Abinet, a sophomore Computer Science student at New York University Abu Dhabi (Class of 2027), currently studying in Paris. 
+          I focus on backend engineering and applied AI — building scalable systems, experimenting with deep learning, and shipping clean code.
+        </p>
+        <ul class="about__highlights">
+          <li>Backend APIs, relational & NoSQL databases, and cloud deploys</li>
+          <li>AI projects in PyTorch and scikit-learn (deep learning, NLP)</li>
+          <li>Strong foundations in algorithms, data structures, and statistics</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
+  <!-- PROJECTS -->
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section__title">Projects</h2>
+
       <div class="grid3">
-        <article class="card">
-          <h3>Fake News Detection</h3>
-          <p>Compared Logistic Regression vs LSTM for text classification.</p>
-          <a href="https://github.com/yourrepo/fake-news" target="_blank">View Project</a>
+        <!-- Project 1 -->
+        <article class="card project">
+          <img src="images/fake-news-detection.png" alt="Fake News Detection model screenshot" />
+          <div class="project__body">
+            <h3>Fake News Detection</h3>
+            <p>Implemented Logistic Regression (TF-IDF) and LSTM on 50K+ articles. Achieved ~79% accuracy with reusable preprocessing pipelines and hyperparameter tuning.</p>
+            <div class="badges">
+              <span>Python</span><span>scikit-learn</span><span>PyTorch</span>
+            </div>
+          </div>
         </article>
-        <article class="card">
-          <h3>WeGo Ride</h3>
-          <p>Ride-booking platform for university students using Node.js & PostgreSQL.</p>
-          <a href="https://github.com/yourrepo/wego" target="_blank">View Project</a>
+
+        <!-- Project 2 -->
+        <article class="card project">
+          <img src="images/wego.png" alt="WeGo Ride project" />
+          <div class="project__body">
+            <h3>WeGo Ride</h3>
+            <p>Full-stack ride-booking web app for students. Built Node.js backend with Express, PostgreSQL, JWT auth, and Chapa/Stripe integration. Hosted on AWS & Vercel.</p>
+            <div class="badges">
+              <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>AWS</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="card project">
+          <img src="images/expense-tracker.png" alt="Expense Tracker app" />
+          <div class="project__body">
+            <h3>Expense Tracker</h3>
+            <p>Cross-platform Flutter app with SQLite, charts, and category dashboards; supports 150+ users and 200+ daily transactions.</p>
+            <div class="badges">
+              <span>Flutter</span><span>SQLite</span><span>Dart</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="card project">
+          <img src="images/translator.png" alt="C++ Multi-language translator" />
+          <div class="project__body">
+            <h3>Multi-Language Translator</h3>
+            <p>C++ dictionary with custom hash table; 800K+ translations; 1.8× query speedup with lazy deletion reducing memory usage by ~25%.</p>
+            <div class="badges">
+              <span>C++</span><span>Data Structures</span><span>Algorithms</span>
+            </div>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
+  <!-- SKILLS -->
   <section id="skills" class="section">
     <div class="container">
       <h2 class="section__title">Skills</h2>
-      <p>Python • C++ • JavaScript • SQL • PyTorch • Node.js • Flutter • AWS • GitHub</p>
+      <div class="card skills">
+        <div class="skills__group">
+          <h4>Languages</h4>
+          <div class="badges">
+            <span>Python</span><span>C++</span><span>Java</span><span>JavaScript</span><span>Dart</span><span>SQL</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h4>Frameworks</h4>
+          <div class="badges">
+            <span>Flutter</span><span>Node.js</span><span>Express</span><span>PyTorch</span><span>scikit-learn</span>
+          </div>
+        </div>
+        <div class="skills__group">
+          <h4>Tools & Databases</h4>
+          <div class="badges">
+            <span>Git</span><span>GitHub</span><span>AWS</span><span>PostgreSQL</span><span>MongoDB</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
+  <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section__title">Contact</h2>
-      <p>Email: <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">Profile</a></p>
-      <p>GitHub: <a href="https://github.com/abinet-cholo" target="_blank">abinet-cholo</a></p>
+      <div class="grid2">
+        <form class="card form" action="https://formspree.io/f/your-id" method="POST">
+          <label>
+            Name
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="btn" type="submit">Send</button>
+          <p class="muted">Or email me at <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
+        </form>
+
+        <div class="card contact__links">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:ab11475@nyu.edu">Email</a></li>
+            <li><a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://github.com/abinet-cholo" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>© <span id="year"></span> Abinet Cholo • Built with ❤️ using HTML, CSS, and JS</p>
+      <p>© <span id="year"></span> Abinet Cholo • Built with HTML, CSS, and JS</p>
     </div>
   </footer>
 
