@@ -1,179 +1,201 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- SEO -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abinet Cholo — Portfolio</title>
-  <meta name="description" content="Portfolio of Abinet Cholo — CS @ NYU Abu Dhabi. Backend development, applied AI, and software engineering projects." />
-  <meta name="theme-color" content="#0b1220" />
-  <link rel="icon" href="favicon.ico" />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abinet Cholo | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
-  <!-- NAVBAR -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a class="logo" href="index.html">AC</a>
-      <nav class="nav__links" id="navLinks">
-        <a class="active" href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <!-- Navigation -->
+  <header style="position: sticky; top: 0; background: #fff; z-index: 1000; padding: 1rem; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <nav>
+      <a href="#about">About</a> |
+      <a href="#education">Education</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#skills">Skills</a> |
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="section hero">
-    <div class="container grid2">
-      <div class="hero__copy">
-        <h1>Abinet Cholo</h1>
-        <p class="tagline">
-          <span id="typed"></span><span class="caret"></span>
-        </p>
-        <div class="hero__cta">
-          <a class="btn" href="#projects">View Projects</a>
-          <a class="btn btn--ghost" href="blog.html">Read Blog</a>
-        </div>
-      </div>
-      <div class="hero__visual">
-        <div class="avatar">
-          <img src="images/profile.jpg" alt="Abinet Cholo">
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- About Section -->
+  <section id="about">
+    <header>
+      <h1>About Me</h1>
+    </header>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <h2 class="section__title">About Me</h2>
-      <div class="card about">
+    <img src="images/profile.jpg" alt="Abinet Cholo" class="profile-photo">
+
+    <main>
+      <div class="about-card">
         <p>
-          I am a Computer Science student at New York University Abu Dhabi (Class of 2027), studying on a full scholarship. 
-          I have hands-on experience in backend development and applied AI, having built scalable APIs, optimized databases, 
-          and deployed systems on AWS as a Backend Intern. Alongside this, I work on AI/ML and software projects in Python, C++, and Flutter.
-          I am passionate about building reliable, high-impact technology that solves real-world problems.
+          I'm Abinet Cholo, a Computer Science student at New York University (Class of 2027), originally from Ethiopia and currently at NYU Abu Dhabi. I’m passionate about backend development, applied AI, and building products that solve meaningful real-world problems. 
+        </p>
+        <p>
+          My experience includes developing scalable APIs, optimizing databases, and deploying systems on AWS during my internship at WeGo Ride. I have also built machine learning and software projects using Python, C++, and Flutter, with hands-on work in PyTorch, Scikit-learn, and SQL.
+        </p>
+        <p>
+          Beyond tech, I’m a football fan and enjoy fostering collaboration and inclusive environments wherever I work.
         </p>
       </div>
-    </div>
+    </main>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section">
-    <div class="container">
-      <h2 class="section__title">Experience</h2>
-      <article class="card experience">
-        <h3>Software Engineer Intern — WeGo Ride</h3>
-        <p class="muted">Adama, Ethiopia • Jun 2025 – Aug 2025</p>
-        <ul>
-          <li>Designed REST APIs with Node.js, integrating fleet, payment, and support modules, increasing throughput by +20 requests/sec.</li>
-          <li>Refactored MongoDB schema and indexing strategies, improving query efficiency by 35% and supporting 5,000+ daily ride requests.</li>
-          <li>Implemented automated Mocha/Chai tests, raising backend coverage to 65% and ensuring reliability at scale.</li>
-          <li>Deployed backend to AWS EC2 with CloudWatch monitoring, reducing recovery time by 20%.</li>
-        </ul>
-      </article>
-    </div>
-  </section>
+  <!-- Education Section -->
+  <section id="education">
+    <header>
+      <h1>Education</h1>
+    </header>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2 class="section__title">Projects</h2>
-      <div class="grid3">
-        <!-- Fake News Detection -->
-        <article class="card project">
-          <img src="images/fake-news-detection.png" alt="Fake News Detection model" />
-          <div class="project__body">
-            <h3>Fake News Detection</h3>
-            <p>Trained Logistic Regression (TF-IDF) and LSTM on 50K+ news articles. Achieved 79% accuracy (F1 0.78), built reusable preprocessing pipelines, and optimized workflows with hyperparameter tuning.</p>
-            <div class="badges"><span>Python</span><span>scikit-learn</span><span>PyTorch</span></div>
-          </div>
-        </article>
-
-        <!-- Expense Tracker -->
-        <article class="card project">
-          <img src="images/expense-tracker.png" alt="Expense Tracker app" />
-          <div class="project__body">
-            <h3>Expense Tracker</h3>
-            <p>Flutter app with SQLite backend, supporting 150+ users and 200+ daily transactions. Features undo-delete, charts, and category dashboards to improve usability and retention.</p>
-            <div class="badges"><span>Flutter</span><span>Dart</span><span>SQLite</span></div>
-          </div>
-        </article>
-
-        <!-- Multi-Language Translator -->
-        <article class="card project">
-          <img src="images/translator.png" alt="Multi-language translator" />
-          <div class="project__body">
-            <h3>Multi-Language Translator</h3>
-            <p>C++ dictionary with custom hash table supporting 800K+ translations. Optimized queries (1.8× faster) and reduced memory by 25% with lazy deletion.</p>
-            <div class="badges"><span>C++</span><span>Data Structures</span><span>Algorithms</span></div>
-          </div>
-        </article>
-
-        <!-- Library Catalog -->
-        <article class="card project">
-          <img src="images/library.png" alt="Library Catalog Management system" />
-          <div class="project__body">
-            <h3>Library Catalog Management</h3>
-            <p>C++ system with custom tree-based data structure, reducing lookup times from 5s → 2s. Command-line interface with 15+ features, streamlining librarian workflows.</p>
-            <div class="badges"><span>C++</span><span>Trees</span><span>OOP</span></div>
-          </div>
-        </article>
+    <main>
+      <div class="edu-card">
+        <p><strong>New York University</strong><br>
+          B.S. in Computer Science<br>
+          Expected Graduation: May 2027<br>
+          Campus: NYU Abu Dhabi<br>
+          Studied abroad at NYU Paris (Spring 2025)
+        </p>
       </div>
-    </div>
+    </main>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2 class="section__title">Skills</h2>
-      <div class="card skills">
-        <div class="skills__group">
-          <h4>Languages</h4>
-          <div class="badges"><span>Python</span><span>C++</span><span>SQL</span><span>Java</span><span>JavaScript</span><span>Dart</span></div>
+  <!-- Projects Section -->
+  <section id="projects">
+    <header>
+      <h1>Projects</h1>
+    </header>
+
+    <main>
+      <div class="project-wrapper">
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Fake News Detection Model | Python, Scikit-learn, PyTorch</h2>
+            <p>
+              Built and trained Logistic Regression and LSTM models on 50K+ articles, achieving 79% accuracy (F1 ≈ 0.78) on 10K test samples using TF-IDF and word embeddings.  
+              Optimized model workflows with reusable preprocessing pipelines, cutting retraining time by ~30% and enabling real-time inference.  
+              Applied hyperparameter tuning (Grid Search + cross-validation) to narrow the train-test gap by ~12% and improve F1 stability.  
+              Published code and documentation on GitHub to ensure reproducibility.
+            </p>
+          </div>
+          <div class="image-card">
+            <img src="images/fake-news-detection.png" alt="Fake News Detection" class="responsive-img">
+          </div>
         </div>
-        <div class="skills__group">
-          <h4>AI & ML</h4>
-          <div class="badges"><span>PyTorch</span><span>scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Matplotlib</span></div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Expense Tracker App | Flutter (Dart), SQLite</h2>
+            <p>
+              Developed a cross-platform Flutter expense tracker app with a SQLite database, enabling multi-session continuity and supporting 150+ users logging 200+ daily transactions.  
+              Built dynamic charts and category-based dashboards for real-time expense visualization, used in 200+ weekly sessions to monitor spending patterns.  
+              Improved usability with undo-delete, date pickers, and category icons, reducing task completion time by 40%, cutting input errors, and increasing overall session retention.
+            </p>
+          </div>
+          <div class="image-card">
+            <img src="images/expense-tracker.png" alt="Expense Tracker" style="width:300px; height:auto; display:block; margin:0 auto;">
+          </div>
         </div>
-        <div class="skills__group">
-          <h4>Frameworks & Tools</h4>
-          <div class="badges"><span>Flutter</span><span>Git</span><span>GitHub</span><span>AWS</span><span>PostgreSQL</span><span>MongoDB</span></div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Multi-Language Translator | C++, Hash Table</h2>
+            <p>
+              Developed a multi-language dictionary in C++ with a custom hash table to manage 800K+ translations across English, German, French, and Spanish.  
+              Implemented polynomial rolling, cyclic shift, and MAD hashing, reducing query latency by 1.8× over a naïve hash.  
+              Added lazy deletion and destructor cleanup, lowering memory overhead by 25% while supporting 5K+ translation updates per session.
+            </p>
+          </div>
+          <div class="image-card">
+            <img src="images/translator.png" alt="Multi-Dictionary" class="responsive-img">
+          </div>
         </div>
-        <div class="skills__group">
-          <h4>Core Strengths</h4>
-          <div class="badges"><span>Debugging</span><span>Problem-Solving</span><span>Cross-Team Communication</span></div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>Library Catalog Management | C++, Tree Data Structure</h2>
+            <p>
+              Developed a custom tree-based data structure in C++ for catalog management, replacing linear search with logarithmic-time queries and improving lookup efficiency by 20%.  
+              Built a command-line interface with 15+ features (search, borrower history, overdue tracking), reducing lookup time from ~5s to under 2s.  
+              Modularized book management by splitting large functions into smaller reusable C++ classes, reducing code duplication by ~100 lines and simplifying future feature integration.
+            </p>
+          </div>
+          <div class="image-card">
+            <img src="images/library-managment.png" alt="Library Managment" class="responsive-img">
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div class="project-card">
+            <h2>2D Plane Survival Game | C++, OOP</h2>
+            <p>
+              Built a survival-style 2D game using object-oriented programming in C++ as part of a team project.  
+              Implemented core mechanics including collision detection, scoring, and increasing difficulty levels to enhance gameplay experience.
+            </p>
+          </div>
+          <div class="image-card">
+            <img src="images/sky-strike.png" alt="Sky Strike Game" class="responsive-img">
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section__title">Contact</h2>
-      <div class="grid2">
-        <form class="card form" action="https://formspree.io/f/your-id" method="POST">
-          <label>Name <input type="text" name="name" required /></label>
-          <label>Email <input type="email" name="email" required /></label>
-          <label>Message <textarea name="message" rows="5" required></textarea></label>
-          <button class="btn" type="submit">Send</button>
-          <p class="muted">Or email me at <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
-        </form>
-        <div class="card contact__links">
-          <h4>Connect</h4>
+  <!-- Skills Section -->
+  <section id="skills">
+    <header>
+      <h1>Skills</h1>
+    </header>
+
+    <main>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Programming Languages</h3>
           <ul>
-            <li><a href="mailto:a
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo"> Python</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++ logo"> C++</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo"> Java</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart logo"> Dart</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL logo"> SQL</li>
+          </ul>
+        </div>
+
+
+
+        <div class="skill-card">
+          <h3>Tools & Libraries</h3>
+          <ul>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter logo"> Flutter</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo"> Git</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="NumPy logo" style="width: 18px;"> NumPy</li>
+            <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg" alt="Pandas logo" style="width: 18px;"> Pandas</li>
+            <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch logo"> PyTorch</li>
+            
+          </ul>
+        </div>
+      </div>
+    </main>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <header>
+      <h1>Contact</h1>
+    </header>
+
+    <main>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:ab11475@nyu.edu">ab11475@nyu.edu</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/abinet-cholo-a6a13029a" target="_blank">abinet-cholo</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/abinet-cholo" target="_blank">abinet-cholo</a></p>
+      </div>
+    </main>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
