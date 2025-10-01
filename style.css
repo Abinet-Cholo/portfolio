@@ -1,182 +1,134 @@
+/* ============================== style.css ============================== */
+
+/* General theme */
 body {
-    font-family: 'Fira Code', monospace;
-    background: linear-gradient(to bottom right, #e3f2fd, #ffffff);
-    color: #1a1a1a;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  header, footer {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  main {
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1.2s ease forwards;
-    animation-delay: 0.5s;
-  }
-  
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  h1 {
-    font-size: 2rem;
-    color: #1565c0;
-    margin-bottom: 2rem;
-  }
-  
-  h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-  }
-  
-  a {
-    color: #1565c0;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #0d47a1;
-  }
-  
-  .about-card,
-  .edu-card,
-  .project-card,
-  .image-card,
-  .skill-card {
-    background: rgba(255, 255, 255, 0.6);
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
-  }
-  
-  .profile-photo {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  
-  .project-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-  }
-  
-  .project-row:nth-child(even) {
-    flex-direction: row-reverse;
-  }
-  
-  .image-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-  
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    margin-top: 2rem;
-  }
-  
-  .skill-card ul {
-    list-style: none;
-    padding: 0;
-    font-size: 0.95rem;
-  }
-  
-  .skill-card ul li {
-    margin: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-  
-  .skill-card img {
-    width: 20px;
-    height: 20px;
-  }
-  
-  .contact-info {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .contact-info p {
-    margin: 0;
-    font-size: 1rem;
-  }
-  
-  .flight-path {
-    display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-  }
-  
-  svg {
-    width: 100%;
-    max-width: 600px;
-    height: 200px;
-  }
-  
-  @keyframes flySlow {
-    0% {
-      offset-distance: 0%;
-    }
-    100% {
-      offset-distance: 100%;
-    }
-  }
-  
-  .plane {
-    offset-path: path('M10,150 C100,0 300,300 580,50');
-    animation: flySlow 10s linear infinite;
-  }
-  .responsive-img {
-  max-width: 100%; /* ensures the image doesn't overflow its container */
-  width: 300px;    /* sets the desired width */
-  height: auto;    /* maintains aspect ratio */
-}
-.small-img {
-  max-width: 300px; /* or any width you prefer */
-  height: auto;     /* maintains aspect ratio */
-  display: block;   /* optional, lets you center the image */
-  margin: 0 auto;   /* optional, centers the image horizontally */
+  font-family: "Montserrat", sans-serif;
+  background: #0d0d0d; /* dark neutral background */
+  color: #fff;
+  margin: 0;
+  padding: 0;
 }
 
+/* Section divider */
+.section-divider {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(13,13,13,1) 100%);
+}
+
+/* Navbar */
+.navbar { background: rgba(0, 0, 0, 0.85); }
+.navbar-brand { font-weight: 700; }
+
+.navbar-nav .nav-link:hover {
+  color: #a64dff !important;
+  text-shadow: 0 0 8px #a64dff;
+}
+
+/* Header */
+header {
+  background: url("header-bg.jpg") no-repeat center/cover;
+  position: relative;
+  height: 100vh;
+}
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+}
+.header-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 20%;
+  text-align: center;
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+  margin-bottom: 20px;
+  animation: bounceIn 2s;
+}
+
+/* Section containers with unified dark background */
+.bg-dark-transparent {
+  background: rgba(24, 24, 25, 0.95); /* consistent dark shade */
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Project card images - equal size */
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Project cards */
+.project-card {
+  background: rgba(43, 41, 41, 0.95) !important;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff !important;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(166, 77, 255, 0.6);
+}
+
+/* Section titles */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #a64dff, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: none;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+/* Skills */
+.skill-tag {
+  display: inline-block;
+  margin: 5px 8px 5px 0;
+  padding: 6px 12px;
+  border: 1px solid #444;
+  border-radius: 20px;
+  background-color: #1a1a1a;
+  color: #ccc;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-tag:hover {
+  background-color: #a64dff;
+  color: #000;
+  box-shadow: 0 0 12px #a64dff;
+  cursor: default;
+}
+
+/* Footer */
+footer {
+  background: rgba(0, 0, 0, 0.95);
+  padding: 20px 0;
+  text-align: center;
+  color: #aaa;
+}
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-content { padding-top: 40%; }
+  .section-title { font-size: 2rem; }
+}
